@@ -113,7 +113,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
         });
 });
 
-app.listen(PORT,(error)=>{
+app.listen(process.env.PORT || PORT,(error)=>{
     error ? console.log(error) : console.log(`listetning server on ${PORT}`);
 });
 
